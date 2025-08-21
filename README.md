@@ -1,119 +1,161 @@
-### **OSINT Template – Automatyczna Konfiguracja Środowiska**  
+# CyberGuru OSINT Workstation
 
-Ten skrypt automatyzuje konfigurację systemu operacyjnego do pracy w OSINT, instalując niezbędne narzędzia, optymalizując środowisko GNOME oraz poprawiając bezpieczeństwo systemu.  
+<div align="center">
+
+![CyberGuru OSINT Workstation](https://img.shields.io/badge/CyberGuru-OSINT%20Workstation-blue?style=for-the-badge)
+![Version](https://img.shields.io/badge/version-1.0.0-green?style=for-the-badge)
+![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge)
+![Platform](https://img.shields.io/badge/platform-Debian%2012%20%7C%2013-red?style=for-the-badge)
+
+**Pierwsza polska stacja robocza OSINT - od zera do eksperta w 15 minut**
+
+*Automatyczna instalacja i konfiguracja profesjonalnego środowiska OSINT używanego w kursie "Mistrzostwo w białym wywiadzie"*
+
+</div>
 
 ---
 
-## **📌 Instalacja**  
+## 🎯 O projekcie
 
-Aby zainstalować i uruchomić skrypt, wykonaj następujące polecenia w terminalu:  
+Stworzyłem ten skrypt, ponieważ każdy analityk OSINT zna ten problem: **20+ godzin** spędzonych na ręcznej instalacji dziesiątek narzędzi, konfiguracji Firefox z odpowiednimi rozszerzeniami, ustawieniu prywatności i personalizacji środowiska pracy.
 
+**Moje rozwiązanie** automatyzuje cały ten proces w **15 minut**.
+
+Ten skrypt jest wykorzystywany w moim kursie **["Mistrzostwo w białym wywiadzie"](https://sklep.pawelhordynski.com/checkout/mistrzostwo-w-bialym-wywiadzie)** - jedynym polskim kursie OSINT na rynku, gdzie uczę praktycznych technik białego wywiadu od podstaw do zaawansowanych metod.
+
+---
+
+## ⚡ Instalacja
+
+### Wymagania
+- **Debian 12 lub 13** (testowane i potwierdzone)
+- **4GB RAM** (zalecane 8GB)
+- **10GB** wolnego miejsca
+- **Połączenie internetowe**
+
+### Jedna komenda - 15 minut
 ```bash
-sudo apt install curl -y
-curl -O https://raw.githubusercontent.com/p4b1o/osint-template/refs/heads/main/setup.sh
-chmod +x setup.sh
-./setup.sh
+curl -O https://raw.githubusercontent.com/p4b1o/osint-template/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
----
-
-## **🔧 Co robi skrypt?**  
-
-### **1. Aktualizacja i instalacja podstawowych narzędzi**  
-
-- Czyści pamięć podręczną i aktualizuje system (`apt update && apt upgrade -y`).  
-- Instaluje niezbędne pakiety: `wget`, `curl`, `git`, `build-essential`, `python3-pip`, `flatpak`, `unzip`.  
-
-### **2. Konfiguracja Pythona**  
-
-- Usuwa ograniczenie `EXTERNALLY-MANAGED` w Pythonie 3.11.  
-- Instaluje `python3-venv` oraz `pipx` do zarządzania pakietami.  
-
-### **3. Instalacja i konfiguracja GNOME**  
-
-- **Instaluje GNOME Extensions CLI** i dodaje niezbędne rozszerzenia:  
-  - `Dash to Dock` – umożliwia dostosowanie docka GNOME.  
-  - `Rozszerzenie 2087` – dodatkowe funkcjonalności dla GNOME.  
-
-- **Konfiguruje środowisko GNOME**:  
-  - Dock zostaje umieszczony na dole ekranu i dostosowany pod kątem użytkownika.  
-  - Wyłączona zostaje automatyczna ukrywanie docka.  
-  - Maksymalny rozmiar ikon w docku ustawiony na 64 px.  
-  - Ustawiony ciemny motyw terminala.  
-  - Zmodyfikowane ustawienia powiadomień i blokady ekranu.  
-
-### **4. Ustawienie tła pulpitu**  
-
-- Pobiera domyślne tło pulpitu i ustawia je jako tapetę systemową.  
-
-### **5. Wyłączenie zawieszania systemu (suspend)**  
-
-- Wyłącza automatyczne przechodzenie systemu w tryb uśpienia.  
-
-### **6. Instalacja narzędzi OSINT (przez pipx)**  
-
-Instaluje kluczowe narzędzia do OSINT:  
-
-- **`Sherlock`** – wyszukiwanie nazw użytkowników w różnych serwisach.  
-- **`Ghunt`** – analiza kont Google.  
-- **`theHarvester`** – zbieranie informacji o domenach.  
-- **`Exiftool`** – analiza metadanych plików.  
-- **`H8mail`** – sprawdzanie wycieków haseł i adresów e-mail.  
-- **`Search-That-Hash` & `Name-That-Hash`** – identyfikacja i analiza skrótów hash.  
-
-### **7. Instalacja Subfinder**  
-
-- Pobiera i instaluje **Subfinder**, narzędzie do enumeracji subdomen.  
-
-### **8. Instalacja Tor Browser i OnionShare**  
-
-- Dodaje repozytorium Flathub i instaluje **Tor Browser**.
-- Uruchamia konfigurator Tor Browser.  
-
-### **9. Instalacja i konfiguracja Firefoxa**  
-
-- Usuwa domyślną wersję Firefoxa.  
-- Instaluje Firefox ESR z repozytorium **Debian Backports**.  
-- Pobiera i rozpakowuje predefiniowany szablon konfiguracji przeglądarki zgodny z **Mistrzostwo w białym wywiadzie: Firefox**.  
-- **Instaluje następujące rozszerzenia:**  
-  - **uBlock Origin** – blokowanie reklam i trackerów.  
-  - **Firefox Containers** – separacja danych między witrynami.  
-  - **Wappalyzer** – identyfikacja technologii używanych na stronach.  
-  - **Fireshot** – tworzenie zrzutów ekranu całych stron internetowych.  
-  - **User-Agent Switcher** – zmiana agenta użytkownika w przeglądarce.  
-  - **Exif Viewer** – analiza danych EXIF w obrazach.  
-  - **OneTab** – zarządzanie zakładkami i oszczędzanie pamięci.  
-  - **DownThemAll** – pobieranie wszystkich zasobów ze strony jednym kliknięciem.  
-  - **Bulk Media Downloader** – pobieranie dużej ilości plików multimedialnych z witryn internetowych.  
-  - **Copy Selected Links** – kopiowanie wszystkich wybranych linków w treści strony.  
-  - **Image Search Options** – ułatwia wyszukiwanie obrazów w różnych wyszukiwarkach.  
-  - **Search By Image** – narzędzie do wyszukiwania odwrotnego obrazów w popularnych serwisach.  
-- **Dostosowuje ustawienia prywatności**, m.in.:  
-  - Włącza ścisłą ochronę przed śledzeniem.  
-  - Włącza blokowanie fingerprintingu.  
-  - Modyfikuje ustawienia WebRTC, by zapobiec wyciekom IP.  
-  - Ogranicza dostęp do sensorów i API geolokalizacji.  
-  - Dezaktywuje telemetrię Mozilli i zbieranie danych diagnostycznych.  
-
-### **10. Instalacja narzędzia WhatsMyName-Python**  
-
-- Pobiera narzędzie **WhatsMyName-Python**, tworzy środowisko `venv` i instaluje zależności.  
-
-### **11. Instalacja Visual Studio Code**  
-
-- Pobiera i instaluje **Visual Studio Code** z oficjalnego repozytorium Microsoft.  
-
-### **12. Konfiguracja ulubionych aplikacji w GNOME-Shell**  
-
-- Dodaje do ulubionych aplikacji:  
-  - `Firefox ESR`  
-  - `GNOME Terminal`  
-  - `VS Code`  
-  - `Tor Browser`  
+**To wszystko!** Za 15 minut masz gotową profesjonalną stację roboczą OSINT.
 
 ---
 
-## **📺 Szkolenie o skrypcie**  
+## 🛠️ Co instaluje mój skrypt
 
-Dowiedz się więcej o konfiguracji i zastosowaniach tego skryptu w OSINT, ogląd...
+### Narzędzia OSINT (15+)
+- **Sherlock** - wyszukiwanie nazw użytkowników w serwisach społecznościowych
+- **theHarvester** - zbieranie informacji o domenach i adresach email
+- **Ghunt** - zaawansowana analiza kont Google
+- **Subfinder** - enumeracja subdomen
+- **H8mail** - sprawdzanie wycieków danych i haseł
+- **Photon** - szybki web crawler zaprojektowany dla OSINT
+- **Search-That-Hash** & **Name-That-Hash** - identyfikacja i analiza hashów
+- **WhatsMyName-Python** - wyszukiwanie usernames w różnych platformach
+- **HTTPTrack** - tworzenie kopii lustrzanych stron internetowych
+- **Exiftool** - analiza metadanych plików
+
+### Firefox z 12 rozszerzeniami OSINT
+- **uBlock Origin** - blokowanie reklam i trackerów
+- **Firefox Containers** - separacja danych między witrynami
+- **Wappalyzer** - identyfikacja technologii używanych na stronach
+- **Fireshot** - tworzenie zrzutów ekranu całych stron
+- **User-Agent Switcher** - zmiana agenta przeglądarki
+- **Exif Viewer** - analiza metadanych obrazów bezpośrednio w przeglądarce
+- **OneTab** - zarządzanie zakładkami i oszczędzanie pamięci
+- **DownThemAll** - pobieranie wszystkich zasobów ze strony
+- **Bulk Media Downloader** - masowe pobieranie plików multimedialnych
+- **Copy Selected Links** - kopiowanie wybranych linków
+- **Image Search Options** - wyszukiwanie obrazów w różnych serwisach
+- **Search By Image** - wyszukiwanie odwrotne obrazów
+
+### Dodatkowe aplikacje
+- **Tor Browser** - anonimowa przeglądarka
+- **OnionShare** - bezpieczne udostępnianie plików
+- **Visual Studio Code** - edytor kodu
+- **Flameshot** - zaawansowane zrzuty ekranu
+- **Obsidian** - notatki i mind mapping
+- **Telegram Desktop** - komunikacja
+- **Draw.io Desktop** - tworzenie diagramów
+
+---
+
+## 🔒 Bezpieczeństwo i prywatność
+
+Mój skrypt automatycznie konfiguruje Firefox zgodnie z najlepszymi praktykami bezpieczeństwa:
+
+✅ **Ścisła ochrona przed śledzeniem**  
+✅ **Blokowanie fingerprintingu**  
+✅ **Konfiguracja WebRTC przeciw wyciekom IP**  
+✅ **Wyłączenie telemetrii Mozilla**  
+✅ **Automatyczne usuwanie cookies po zamknięciu**  
+✅ **Ograniczenie dostępu do sensorów i geolokalizacji**  
+
+### Personalizacja systemu
+- Dostosowany dock GNOME na dole ekranu
+- Ciemny motyw terminala
+- Wyłączenie automatycznego zawieszania systemu
+- Personalizowane tło pulpitu
+- Ulubione aplikacje w menu startowym
+
+---
+
+## 📚 Kurs "Mistrzostwo w białym wywiadzie"
+
+Ten skrypt jest integralną częścią mojego kursu **["Mistrzostwo w białym wywiadzie"](https://sklep.pawelhordynski.com/checkout/mistrzostwo-w-bialym-wywiadzie)**, gdzie:
+
+🎯 **Uczę praktycznych technik OSINT** od podstaw do zaawansowanych metod  
+🛠️ **Pokazuję jak używać każdego z zainstalowanych narzędzi**  
+🔍 **Prowadzę przez rzeczywiste case studies**  
+🇵🇱 **Wszystko w języku polskim** z polskimi przykładami  
+
+Kurs to **jedyne polskie szkolenie OSINT** na rynku, które łączy teorię z praktyką i daje konkretne umiejętności potrzebne w pracy analityka.
+
+---
+
+## 📊 Dlaczego moje rozwiązanie?
+
+| Cecha | Moje rozwiązanie | Konkurencja |
+|-------|------------------|-------------|
+| **Język** | 🇵🇱 Polski | 🇬🇧 Angielski |
+| **Czas instalacji** | ⚡ 15 minut | ⏱️ 30+ minut |
+| **Konfiguracja Firefox** | ✅ 12 rozszerzeń | ✅ Podstawowa |
+| **Ustawienia prywatności** | ✅ Zaawansowane | ✅ Podstawowe |
+| **Wsparcie kursu** | ✅ Mistrzostwo w białym wywiadzie | ❌ Brak |
+| **Testowane na** | ✅ Debian 12, 13 | ✅ Różne systemy |
+
+---
+
+## 🚀 Korzyści
+
+### Oszczędność czasu
+**20+ godzin** ręcznej konfiguracji → **15 minut** automatycznej instalacji
+
+### Standardizacja
+Identyczne, optymalne środowisko dla wszystkich analityków w zespole
+
+### Bezpieczeństwo
+Predefiniowane ustawienia prywatności zgodne z najlepszymi praktykami
+
+### Kompletność
+Nie tylko narzędzia, ale całe środowisko pracy gotowe od razu
+
+---
+
+## 📄 Licencja
+
+Projekt udostępniam na licencji MIT - możesz go swobodnie używać, modyfikować i dystrybuować.
+
+---
+
+<div align="center">
+
+**Stworzony przez Pawła Hordyńskiego dla polskiej społeczności OSINT**
+
+[🎓 Kurs "Mistrzostwo w białym wywiadzie"](https://sklep.pawelhordynski.com/checkout/mistrzostwo-w-bialym-wywiadzie)
+
+*Twoja droga do profesjonalnego OSINT zaczyna się tutaj.*
+
+</div>
 
