@@ -1,27 +1,6 @@
-# CyberGuru OSINT Workstation
-
-<div align="center">
-
-![CyberGuru OSINT Workstation](https://img.shields.io/badge/CyberGuru-OSINT%20Workstation-blue?style=for-the-badge)
-![Version](https://img.shields.io/badge/version-1.0.0-green?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-orange?style=for-the-badge)
-![Platform](https://img.shields.io/badge/platform-Debian%2012%20%7C%2013-red?style=for-the-badge)
-
-**Pierwsza polska stacja robocza OSINT - od zera do eksperta w 15 minut**
-
-*Automatyczna instalacja i konfiguracja profesjonalnego środowiska OSINT używanego w kursie "Mistrzostwo w białym wywiadzie"*
-
-</div>
+# OSINT Workstation
 
 ---
-
-## 🎯 O projekcie
-
-Stworzyłem ten skrypt, ponieważ każdy analityk OSINT zna ten problem: **20+ godzin** spędzonych na ręcznej instalacji dziesiątek narzędzi, konfiguracji Firefox z odpowiednimi rozszerzeniami, ustawieniu prywatności i personalizacji środowiska pracy.
-
-**Moje rozwiązanie** automatyzuje cały ten proces w **15 minut**.
-
-Ten skrypt jest wykorzystywany w moim kursie **["Mistrzostwo w białym wywiadzie"](https://sklep.pawelhordynski.com/checkout/mistrzostwo-w-bialym-wywiadzie)** - jedynym polskim kursie OSINT na rynku, gdzie uczę praktycznych technik białego wywiadu od podstaw do zaawansowanych metod.
 
 ---
 
@@ -38,11 +17,11 @@ Ten skrypt jest wykorzystywany w moim kursie **["Mistrzostwo w białym wywiadzie
 curl -O https://raw.githubusercontent.com/p4b1o/osint-template/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
-**To wszystko!** Za 15 minut masz gotową profesjonalną stację roboczą OSINT.
+**** Za 15 minut masz gotową profesjonalną stację roboczą OSINT.
 
 ---
 
-## 🛠️ Co instaluje mój skrypt
+## 🛠️ Co instaluje ten skrypt
 
 ### Narzędzia OSINT (15+)
 - **Sherlock** - wyszukiwanie nazw użytkowników w serwisach społecznościowych
@@ -83,7 +62,7 @@ curl -O https://raw.githubusercontent.com/p4b1o/osint-template/main/setup.sh && 
 
 ## 🔒 Bezpieczeństwo i prywatność
 
-Mój skrypt automatycznie konfiguruje Firefox zgodnie z najlepszymi praktykami bezpieczeństwa:
+Ten skrypt automatycznie konfiguruje Firefox zgodnie z najlepszymi praktykami bezpieczeństwa:
 
 ✅ **Ścisła ochrona przed śledzeniem**  
 ✅ **Blokowanie fingerprintingu**  
@@ -101,33 +80,20 @@ Mój skrypt automatycznie konfiguruje Firefox zgodnie z najlepszymi praktykami b
 
 ---
 
-## 📚 Kurs "Mistrzostwo w białym wywiadzie"
+---
 
-Ten skrypt jest integralną częścią mojego kursu **["Mistrzostwo w białym wywiadzie"](https://sklep.pawelhordynski.com/checkout/mistrzostwo-w-bialym-wywiadzie)**, gdzie:
-
-🎯 **Uczę praktycznych technik OSINT** od podstaw do zaawansowanych metod  
-🛠️ **Pokazuję jak używać każdego z zainstalowanych narzędzi**  
-🔍 **Prowadzę przez rzeczywiste case studies**  
-🇵🇱 **Wszystko w języku polskim** z polskimi przykładami  
-
-Kurs to **jedyne polskie szkolenie OSINT** na rynku, które łączy teorię z praktyką i daje konkretne umiejętności potrzebne w pracy analityka.
+| Cecha | To rozwiązanie |
+|-------|------------------|
+| **Język** | 🇵🇱 Polski |
+| **Czas instalacji** | ⚡ 15 minut |
+| **Konfiguracja Firefox** | ✅ 12 rozszerzeń |
+| **Ustawienia prywatności** | ✅ Zaawansowane | 
+| **Wsparcie kursu** | ✅ Mistrzostwo w białym wywiadzie |
+| **Testowane na** | ✅ Debian 12, 13 | 
 
 ---
 
-## 📊 Dlaczego moje rozwiązanie?
-
-| Cecha | Moje rozwiązanie | Konkurencja |
-|-------|------------------|-------------|
-| **Język** | 🇵🇱 Polski | 🇬🇧 Angielski |
-| **Czas instalacji** | ⚡ 15 minut | ⏱️ 30+ minut |
-| **Konfiguracja Firefox** | ✅ 12 rozszerzeń | ✅ Podstawowa |
-| **Ustawienia prywatności** | ✅ Zaawansowane | ✅ Podstawowe |
-| **Wsparcie kursu** | ✅ Mistrzostwo w białym wywiadzie | ❌ Brak |
-| **Testowane na** | ✅ Debian 12, 13 | ✅ Różne systemy |
-
 ---
-
-## 🚀 Korzyści
 
 ### Oszczędność czasu
 **20+ godzin** ręcznej konfiguracji → **15 minut** automatycznej instalacji
@@ -143,19 +109,5 @@ Nie tylko narzędzia, ale całe środowisko pracy gotowe od razu
 
 ---
 
-## 📄 Licencja
-
-Projekt udostępniam na licencji MIT - możesz go swobodnie używać, modyfikować i dystrybuować.
-
 ---
-
-<div align="center">
-
-**Stworzony przez Pawła Hordyńskiego dla polskiej społeczności OSINT**
-
-[🎓 Kurs "Mistrzostwo w białym wywiadzie"](https://sklep.pawelhordynski.com/checkout/mistrzostwo-w-bialym-wywiadzie)
-
-*Twoja droga do profesjonalnego OSINT zaczyna się tutaj.*
-
-</div>
 
