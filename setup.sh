@@ -53,11 +53,11 @@ gnome-extensions-cli install 2087
 # TŁO PULPITU
 ###############################################################################
 echo "Pobieranie i ustawianie tła pulpitu..."
-wget -O "$HOME/desktop.png" \
-  https://github.com/p4b1o/osint-template/raw/main/desktop.png
+wget -O "$HOME/https://img.freepik.com/darmowe-wektory/ilustracja-logo-czerwonej-osmiornicy-wektorowej_43623-1745.jpg?semt=ais_rp_50_assets&w=740&q=80" \
+  https://github.com/informatykgrudziadz/osint-template/raw/main/https://img.freepik.com/darmowe-wektory/ilustracja-logo-czerwonej-osmiornicy-wektorowej_43623-1745.jpg?semt=ais_rp_50_assets&w=740&q=80
 
-gsettings set org.gnome.desktop.background picture-uri "file://$HOME/desktop.png"
-gsettings set org.gnome.desktop.background picture-uri-dark "file://$HOME/desktop.png"
+gsettings set org.gnome.desktop.background picture-uri "file://$HOME/https://img.freepik.com/darmowe-wektory/ilustracja-logo-czerwonej-osmiornicy-wektorowej_43623-1745.jpg?semt=ais_rp_50_assets&w=740&q=80"
+gsettings set org.gnome.desktop.background picture-uri-dark "file://$HOME/https://img.freepik.com/darmowe-wektory/ilustracja-logo-czerwonej-osmiornicy-wektorowej_43623-1745.jpg?semt=ais_rp_50_assets&w=740&q=80"
 gsettings set org.gnome.desktop.background primary-color "rgb(0, 0, 0)"
 
 ###############################################################################
