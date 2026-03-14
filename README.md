@@ -14,7 +14,7 @@
 
 ### Jedna komenda - 15 minut
 ```bash
-curl -O https://raw.githubusercontent.com/p4b1o/osint-template/main/setup.sh && chmod +x setup.sh && ./setup.sh
+curl -O https://raw.githubusercontent.com/informatykgrudziadz/osint-template/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
 **** Za 15 minut masz gotową profesjonalną stację roboczą OSINT.
